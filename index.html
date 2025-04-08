@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url(''); background-size: cover;">
+
+    <header>
+        
+        <h1>Hostel Management System - Greater Noida</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- New Blog section -->
+                <li><a href="feedback.html">Feedback</a></li>
+
+            </ul>
+        </nav>
+        <input type="text" id="searchBox" placeholder="Search hostels by name or location..." onkeyup="filterHostels()">
+    </header>
+
+    <div class="hostel-container">
+        <div class="hostel-list" id="hostelList">
+            <!-- Hostel items will be inserted here dynamically by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Check if the user is logged in
+        const isLoggedIn = localStorage.getItem('loggedIn');
+
+        // If not logged in, redirect to login page
+        if (!isLoggedIn) {
+            alert('You must log in first!');
+            window.location.href = 'login.html'; // Redirect to login page
+        }
+    </script> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+/* Hostel list container - make it display flex to align items horizontally */
+.hostel-list {
+    display: flex;
+    flex-wrap: wrap;  /* Ensures the items wrap to the next line if the width exceeds */
+    justify-content: space-around;  /* Adds space between the items */
+    padding: 20px;
+}
+
+/* Hostel Cards - Add colors but preserve positioning and alignment */
+.hostel-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #ff6b6b, #f06595, #845ef7);
+}
+
+/* Different background colors for each hostel box */
+.hostel-item:nth-child(odd) {
+    background-color: #f9f0ff;  /* light purple */
+}
+
+.hostel-item:nth-child(even) {
+    background-color: #e0ffe5;  /* light green */
+}
+
+/* Hover effect for colorful hostel cards */
+.hostel-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-image-source: linear-gradient(45deg, #69db7c, #38d9a9, #4dabf7);
+}
+
+.hostel-item {
+    text-decoration: none;  /* Remove underline from links */
+    color: inherit;
+}
+
+/* Center align the header content */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background color */
+}
+
+/* Center the title in the middle */
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Style for the buttons (Home, Blog) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    background-color: #007bff; /* Button background color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Center the search bar */
+header input[type="text"] {
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%; /* Adjust the width of the search bar */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Align text in the center */
+}
+
+/* Flex container for aligning everything centrally */
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9fb;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #80e0e6; /* Deep Teal */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #ffcc00; /* Soft Gold */
+}
+
+/* Buttons */
+input[type="submit"] {
+    background-color: #004d40; /* Dark Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #00332b; /* Darker Green */
+}
+
+/* Containers */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Fields */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #00695c; /* Deep Teal */
+    outline: none;
+}
+
+/* Additional Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Body Font and Background */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f9fb;
+}
+
+/* Search Box */
+#searchBox {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* Login Page Specific Styles */
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('background.jpg') no-repeat center center/cover;
+}
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Hover Animations */
+a:hover, button:hover, input[type="submit"]:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Blog Section */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.blog-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.blog-meta span {
+    color: #007bff;
+}
+
+.blog-summary {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #ffcc00; /* Soft Gold */
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #80e0e6; /* Deep teal color */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.blog-container {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Main content (Blog section) */
+.main-content {
+    flex: 0 0 70% !important; /* Takes 70% of the width */
+    padding-right: 20px;
+}
+
+.blog-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: scale(1.02);
+}
+
+.blog-title {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.blog-content {
+    color: #555;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #004d40;
+}
+
+/* Sidebar (Categories Section) */
+.sidebar {
+    flex: 0 0 30% !important; /* Takes 30% of the width */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.categories, .recent-posts, .subscribe {
+    margin-bottom: 20px;
+}
+
+.categories h3, .recent-posts h3, .subscribe h3 {
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.categories ul, .recent-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories ul li, .recent-posts ul li {
+    margin-bottom: 10px;
+}
+
+.categories ul li a, .recent-posts ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.categories ul li a:hover, .recent-posts ul li a:hover {
+    text-decoration: underline;
+}
+
+.subscribe input[type="email"] {
+    width: calc(100% - 30px); /* Full width minus padding */
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.subscribe button {
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: #004d40;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+.feedback-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.star {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.selected, .star:hover {
+    color: #ffcc00;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.feedback-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for full-width background */
+.hostel-container {
+    background-color: #f0f4f8; /* Light neutral color */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100vw; /* Full viewport width */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); /* Center align */
+    box-sizing: border-box; /* Ensures padding doesn’t add to width */
+}
+
+.hostel-list .hostel-card {
+    margin-bottom: 20px;
+}
